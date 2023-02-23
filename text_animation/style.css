@@ -1,0 +1,100 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
+.wrapper{
+    font-family:'Franklin Gothic Medium';
+    font-size: 80px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+}
+
+.static-txt{
+    display:inline-block;
+    color: white;
+}
+
+.dynamic-txts{
+    display:inline-block;
+    vertical-align: top;
+    height: 90px;
+    overflow: hidden;
+}
+
+.dynamic-txts div{
+    animation: 15s textchange;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1);
+    /* animation: textchange 4s steps(1) infinite; */
+
+}
+
+.dynamic-txts span{
+    position: relative;
+    color: #ff4c29;
+    display: block;
+    text-align: left;
+}
+
+.dynamic-txts span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    border-left: 5px solid #ff4c29;
+    height: 100%;
+    background: black;
+    animation: typing 5s steps(17) infinite;
+    /* animation: 5s typing;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(20);
+    animation-fill-mode: backwards; */
+
+    right: -2px;
+    background-color: black;
+	overflow: hidden;
+}
+
+@keyframes typing{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+ 
+@keyframes textchange{
+    0%{
+        margin-top: 0;
+    }
+    33.333%{
+        margin-top: -90px;
+    }
+    66.666%{
+        margin-top: -180px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+/* typing >>>> textchange*/
+/* 3 >>>> 9 */
+/* 4 >>>> 12 */
+/* 5 >>>> 15 */
