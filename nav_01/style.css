@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --bg-color:#222327;
+    --text-color: #fff;
+    --main-color:#29fd53;
+
+}
+
+body{
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header{
+    position:fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(44, 2, 99);
+    padding: 28px 12%;
+    transition: all .50s ease;
+}
+
+.f_suas_logo{
+    width: 150px;
+
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0 10px;
+    transition: all .50s ease;
+
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.navbar a.active{
+    color: var(--main-color);
+}
+
+.main{
+    display: flex;
+    align-items: center;
+}
+
+.main a{
+    margin-right: 15px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.user i{
+    color: var(--main-color);
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+.main a:hover{
+    color: var(--main-color);
+}
+
+#menu-icon{
+    display: none;
+    /* font-size: 1.3rem;
+    z-index: 10001;
+    cursor: pointer; */
+
+}
+#close-icon{
+    display: none;
+}
+
+
+
+@media (max-width: 1280px) {
+    header{
+        padding: 14 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+    
+}
+
+@media (max-width: 1100px) {
+    #menu-icon{
+        display: block;
+    }
+
+    #menu-icon.hide{
+        display: none;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 29vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 0 0 10px 10px;
+        transition: all .50s ease;
+    }
+    .navbar a{
+        display: block;
+        margin: 5px 0;
+        padding: 0 25px;
+        transition: all .50s ease;
+    }
+
+    .navbar a:hover{
+        color: var(--text-color);
+        transform: translateY(5px);
+    }
+
+    .navbar a.active{
+        color: var(--text-color);
+        
+    }
+    .navbar.open{
+        right: 2%;
+    }
+
+    
+}
