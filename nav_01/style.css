@@ -10,7 +10,8 @@
 :root{
     --bg-color:#222327;
     --text-color: #fff;
-    --main-color:#29fd53;
+    /* --main-color:#29fd53; */
+    --main-color:#ff4c29;
 
 }
 
@@ -74,6 +75,14 @@ header{
     font-weight: 500;
     transition: all .50s ease;
 }
+.main i{
+    
+    color: var(--main-color);
+    margin-right: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+}
 
 .user{
     display: flex;
@@ -83,7 +92,7 @@ header{
 .user i{
     color: var(--main-color);
     margin-right: 8px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .main a:hover{
@@ -92,16 +101,7 @@ header{
 
 #menu-icon{
     display: none;
-    /* font-size: 1.3rem;
-    z-index: 10001;
-    cursor: pointer; */
-
 }
-#close-icon{
-    display: none;
-}
-
-
 
 @media (max-width: 1280px) {
     header{
@@ -120,9 +120,7 @@ header{
         display: block;
     }
 
-    #menu-icon.hide{
-        display: none;
-    }
+    
     .navbar{
         position: absolute;
         top: 100%;
@@ -135,26 +133,32 @@ header{
         justify-content: flex-start;
         border-radius: 0 0 10px 10px;
         transition: all .50s ease;
+        
     }
+
+    .navbar.open{
+        right: 2%;
+    }
+
     .navbar a{
         display: block;
         margin: 5px 0;
         padding: 0 25px;
         transition: all .50s ease;
+        color: #222327;
     }
 
     .navbar a:hover{
         color: var(--text-color);
         transform: translateY(5px);
+        
     }
 
     .navbar a.active{
         color: var(--text-color);
         
     }
-    .navbar.open{
-        right: 2%;
-    }
+    
 
     
 }
