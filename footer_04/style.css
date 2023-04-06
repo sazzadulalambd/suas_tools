@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+    box-sizing: border-box;
+}
+
+body{
+    background: #000000;
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, #3f71af, #000000);
+    color: #fff;
+    /* padding: 100px 0 30px; */
+    padding: 50px 0 30px;
+    font-size: 13px;
+    line-height: 20px;
+    background-image: url("bg_.png");  
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    /* background-attachment:fixed; */
+
+}
+
+.f_suas_row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.f_suas_col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.f_suas_col:nth-child(2), .f_suas_col:nth-child(3){
+    flex-basis: 15%;
+}
+
+.f_suas_logo{
+    width: 200px;
+    margin-bottom: 10px;
+}
+.f_suas_col h3 {
+    width: fit-content;
+    /* margin-bottom: 40px; */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.email{
+    width: fit-content;
+    border-top: 1px solid #ccc;
+    /* margin: 20px 0; */
+    margin: 10px 0 0;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+    }
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}    
+
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    margin-bottom: 50px;
+    
+
+}
+
+form .far{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input{
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: none;
+
+}
+
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+
+}
+
+form button .fa-solid{
+    font-size: 16px;
+    color: #ccc;
+}
+
+::placeholder{
+    color: #ccc;
+}
+
+.f_suas_social-icons .fa-brands{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+}
+
+.icon_color_facebook{
+    color:white;
+    background-color:#3b5998;
+}
+
+.icon_color_twitter{
+    color:white;
+    background-color:#00acee;
+}
+.icon_color_linkedin{
+    color:white;
+    background-color:#0072b1;
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    margin: 20px auto;
+}
+
+.f_suas_copyright{
+    text-align: center;
+    /* margin-left: 50px; */
+}
+
+.f_suas_underline{
+    width: 100%;
+    height: 5px;
+    background:skyblue ;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.f_suas_underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+.icon_text{
+    display: flex;
+    margin: auto;
+    flex-wrap:initial;
+    align-items: flex-start;
+    justify-content:left;
+    align-items: center;
+}
+.icon_text_item{
+    padding: 0 6px;
+
+}
+
+
+@keyframes moving {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+    
+}
+
+@media (max-width:700px) {
+    footer{
+        bottom: unset;
+        background-size:contain;
+    }
+    .f_suas_col{
+        flex-basis: 100%;
+
+    }
+    
+    .f_suas_col:nth-child(2), .f_suas_col:nth-child(3){
+        flex-basis: 100%;
+    }
+}
+
