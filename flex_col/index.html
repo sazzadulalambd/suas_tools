@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equal Height Flexbox Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="px-4 py-2">
+        <!-- Top Row -->
+        <div class="flex flex-wrap -mx-2 mb-4">
+            <div class="w-full lg:w-9/12 px-2 mb-4">
+                <div class="bg-white p-4 border rounded-lg h-full">hello</div>
+            </div>
+            <div class="w-full lg:w-3/12 px-2 mb-4">
+                <div class="bg-white p-4 border rounded-lg h-full">Your long text goes here. It will wrap properly
+                    within the container without breaking the layout.</div>
+            </div>
+        </div>
+        <!-- Middle Row -->
+        <div class="flex flex-wrap -mx-2 mb-4 items-stretch">
+            <div class="w-full lg:w-6/12 px-2 mb-4">
+                <div class="bg-white p-4 border rounded-lg h-full">pro</div>
+            </div>
+            <div class="w-full lg:w-3/12 px-2 mb-4">
+                <div class="bg-white p-4 border rounded-lg h-full">Your long text goes here. It will wrap properly
+                    within the container without breaking the layout.</div>
+            </div>
+            <div class="w-full lg:w-3/12 px-2 mb-4">
+                <div class="bg-white p-4 border rounded-lg h-full">suas</div>
+            </div>
+        </div>
+        <!-- Bottom Row -->
+        <div class="flex flex-wrap -mx-2 items-stretch">
+            <div class="w-full lg:w-4/12 px-2 mb-4">
+                <div class="bg-white p-4 border rounded-lg h-full">
+                    Your long text goes here. It will wrap properly within the container without breaking the layout.
+                </div>
+            </div>
+            <div class="w-full lg:w-4/12 px-2 mb-4">
+                <div class="bg-white p-4 border rounded-lg overflow-hidden h-full">gee</div>
+            </div>
+            <div class="w-full lg:w-4/12 px-2 mb-4">
+                <div class="bg-white p-4 border rounded-lg overflow-hidden h-full">suas</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
